@@ -31,6 +31,11 @@
      (* c (/ dt  dx) (- (nth i un)
 		     (nth (- i 1) un)))))
 
+(defun transpose-rh-inviscid-burgers (un c dt dx i)
+  (- (nth i un)
+     (* (nth i un) (/ dt  dx) (- (nth i un)
+		     (nth (- i 1) un)))))
+
  
 (defun finite-difference ()
   (setq un
